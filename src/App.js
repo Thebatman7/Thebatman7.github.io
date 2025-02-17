@@ -29,6 +29,7 @@ function App() {
   const [language, setLanguage] = useState(() => {
     return localStorage.getItem('selectedLanguage') || 'en'; // Retrieve stored language or default to 'en'
   });
+
   // Store selected language in localStorage on change
   React.useEffect(() => {
     localStorage.setItem('selectedLanguage', language);
@@ -53,6 +54,12 @@ function App() {
     }, 1000); // Duration of the fade-out effect
   };
 
+  // If there's an error with the video, skip the intro
+  const handleVideoError = () => {
+    console.error('Error loading the intro video. Skipping intro...');
+    setShowIntro(false);
+  };
+
   return (
     <div className={`app-container ${fadeOut ? 'fade-out' : ''}`}>
       {!consentGiven && <CookieConsent onConsent={() => setConsentGiven(true)} language={language} />}
@@ -65,6 +72,7 @@ function App() {
             muted 
             playsInline
             onEnded={handleVideoEnd}
+            onError={handleVideoError}
             className="intro-video"
           >
             <source src={process.env.PUBLIC_URL + '/intro.mp4'} type="video/mp4" />
