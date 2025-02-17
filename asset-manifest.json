@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/thebatman7.github.io/static/css/main.6a949fc2.css",
-    "main.js": "/thebatman7.github.io/static/js/main.c6ad9dd0.js",
-    "static/media/rembrand_pardo_removebg.png": "/thebatman7.github.io/static/media/rembrand_pardo_removebg.1a1ef57db6add93bd685.png",
-    "static/media/r-logo.png": "/thebatman7.github.io/static/media/r-logo.d252c8711b273beca736.png",
-    "index.html": "/thebatman7.github.io/index.html",
-    "main.6a949fc2.css.map": "/thebatman7.github.io/static/css/main.6a949fc2.css.map",
-    "main.c6ad9dd0.js.map": "/thebatman7.github.io/static/js/main.c6ad9dd0.js.map"
+    "main.css": "/static/css/main.6a949fc2.css",
+    "main.js": "/static/js/main.c85e5f36.js",
+    "static/media/rembrand_pardo_removebg.png": "/static/media/rembrand_pardo_removebg.1a1ef57db6add93bd685.png",
+    "static/media/r-logo.png": "/static/media/r-logo.d252c8711b273beca736.png",
+    "index.html": "/index.html",
+    "main.6a949fc2.css.map": "/static/css/main.6a949fc2.css.map",
+    "main.c85e5f36.js.map": "/static/js/main.c85e5f36.js.map"
   },
   "entrypoints": [
     "static/css/main.6a949fc2.css",
-    "static/js/main.c6ad9dd0.js"
+    "static/js/main.c85e5f36.js"
   ]
 }
