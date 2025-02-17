@@ -1,0 +1,278 @@
+h1, h2, p {
+    text-align: center;
+}
+  
+section {
+    margin-bottom: 2rem;
+}
+
+.page-container {
+    opacity: 0; /* Start invisible */
+    transition: opacity 0.5s ease-in; /* Transition effect */
+}
+  
+.page-container.visible {
+    opacity: 1; /* Become visible */
+}
+
+/* Expandable cards */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;  /* Gap between cards */
+    margin-bottom: 2rem;
+    flex-wrap: wrap; /*Ensure wrapping on smaller screens*/
+    margin-left: 7rem;
+    margin-right: 7rem;
+}
+
+/* Individual card styles */
+.card-byu .card {
+    background-color: #fffdfd55;
+}
+
+.card-slcc .card {
+    background-color: #f4f5f657;
+}
+
+.card-byu .card:hover {
+    background-color: #f4f5f6a0;
+}
+
+.card-slcc .card:hover {
+    background-color: #f4f5f6a0;
+}
+
+.card:hover {
+    box-shadow: 0 0 7px 3px rgba(0, 132, 255, 0.353); /* Blue glow effect */
+    cursor: pointer;
+}
+
+.card.expanded {
+    background-image: linear-gradient(
+        to bottom, 
+        rgba(255, 255, 255, 0.408) 20%,    /* Start at the top */
+        rgba(0, 0, 0, 0.4) 28%,   /* Hold the white for 28% of the height */
+        rgba(0, 0, 0, 0.622) 78%           /* Transition to black at 780% of the height */
+    );
+    height: auto; /* Allow the card to expand as needed */
+    cursor: default; /* Remove pointer cursor */
+}
+
+.card-slcc .card:hover {
+    cursor: pointer;
+}
+
+.card-byu .card:hover {
+    cursor: pointer;
+}
+
+.card-slcc .card.expanded {
+    cursor: default;
+}
+
+.card-byu .card.expanded {
+    cursor: default;
+}
+
+.card-image {
+    width: 100%;
+    height: 300px;  /* Fixed height for the image */
+    object-fit: contain; /* Ensure image scales properly */
+    transition: height 0.3s ease;
+}
+
+.card.expanded .card-image {
+    height: 300px; /* Keep the image size the same when expanded */
+}
+
+/* Card content - hidden by default and shown when expanded */
+.card-content {
+    padding: 1rem;
+    display: none; /* Hidden when the card is collapsed */
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card.expanded .card-content {
+    display: flex; /* Show content when the card is expanded */
+}
+
+.card-title {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    z-index: 10;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.expandable-card-p {
+    text-align: left;
+    font-size: 1.4rem !important;
+}
+
+.card-description {
+    margin: 1rem 0;
+    color: white;
+    text-align: left;
+    font-size: 1.4rem;
+}
+
+.card-description ul {
+    list-style-type: disc; /* Use bullet points */
+    margin-left: 1.5rem; /* Indent the list */
+    padding-left: 0; /* Remove default padding */
+}
+
+.card-description li {
+    margin-bottom: 0.5rem; /* Space between list items */
+    font-size: 1.4rem;
+}
+
+.card-content .card-button {
+    align-self: center;
+    padding: 0.5rem 1.3rem;
+    background-color: #0044ffd7;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1.2rem;  
+}
+
+.card-content .card-button:hover {
+    background-color: #0015b3;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column; /* Stack cards on top of each other on smaller screens */
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        align-items: center;
+    }
+
+    .card-image {
+        height: 200px; /* Smaller height for images on mobile */
+    }
+
+    .card-description p {
+        font-size: 1rem;
+    }
+    
+    .card-description {
+        font-size: 1rem;
+    }
+
+    .card-content .card-button {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;  
+    }
+}
+
+
+/* Quote Section */
+.quote_section {
+    text-align: center;
+    margin: 40px auto; /* Center with margin */
+    width: 70%; /* Make this section take up 80% of the page width */
+    margin-top: 70px;
+}
+  
+.quote_section h1 {
+    font-size: 2.5rem; /* Default font size for larger screens */
+    font-weight: bold;
+    margin-bottom: 7px;
+    color: white; /* Text color set to white */
+}
+  
+.quote_section p {
+    font-size: 1.5rem; /* Default font size for larger screens */
+    text-align: right; /* Align the author to the right */
+    margin-right: 23px;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.64); /* Text color set to white */
+    margin-bottom: 10px;
+}
+  
+/* Body Section */
+.body_section {
+    margin: 40px auto; /* Center with margin */
+    width: 80%; /* Make this section take up 80% of the page width */
+}
+  
+.body_section p {
+    font-size: 1.6rem; /* Default font size for larger screens */
+    line-height: 1.6; /* Improved readability with spacing */
+    color: white; /* Text color set to white */
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: #4784ff; /* Change this to the color you want */
+}
+
+.expandableCards_section {
+    margin: 40px auto; /* Center with margin */
+    width: 80%; /* Make this section take up 80% of the page width */
+    margin-bottom: 10px;
+}
+
+.expandableCards_section h2 {
+    font-size: 2rem;
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+  
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .quote_section h1 {
+      font-size: 2rem; /* Smaller for tablets */
+    }
+  
+    .quote_section p {
+        font-size: 1.25rem; /* Adjust font size for tablets */
+        margin-right: 10px;
+    }
+  
+    .body_section p {
+      font-size: 1.1rem; /* Adjust font size for tablets */
+    }
+}
+  
+@media (max-width: 768px) {
+    .quote_section h1 {
+      font-size: 2rem; /* Smaller for mobile */
+    }
+  
+    .quote_section p {
+      font-size: 1rem; /* Adjust font size on smaller screens */
+      margin-right: 5px; /* Reduce margin for mobile */
+    }
+  
+    .body_section p {
+      font-size: 1.1rem; /* Adjust font size for mobile */
+    }
+
+    .expandableCards_section h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 820px) and (max-width: 1025px) {
+    .card-slcc .card {
+        height: auto !important;
+    }
+
+    .card-byu .card {
+        height: auto !important;
+    }
+}
+  
+  

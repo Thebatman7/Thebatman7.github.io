@@ -1,0 +1,88 @@
+.about_page {
+  opacity: 0; /* Start invisible */
+  transition: opacity 0.5s ease-in; /* Transition effect */
+}
+
+.about_page.visible {
+  opacity: 1; /* Become visible */
+}
+
+.no-visible-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.no-visible-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.text-7xl {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+/* Ensure only TracingBeam p tags are affected */
+.tracingBeam_section p {
+  font-size: 1.5rem;
+  line-height: 1.3;
+}
+
+.about_heading_section {
+  text-align: center;
+  margin: 40px auto; /* Center with margin */
+  width: 70%; /* Make this section take up 80% of the page width */
+  margin-top: 70px;
+}
+
+.about_heading_section h1 {
+  font-size: 2.5rem; /* Default font size for larger screens */
+  font-weight: bold;
+  margin-bottom: 7px;
+  color: white; /* Text color set to white */
+}
+
+.custom-description p {
+  margin-bottom: 1.5rem; /* Adjust spacing between paragraphs */
+}
+
+.custom-description a {
+  color: #89CFF0; /* Baby blue color for links */
+}
+
+.about_end_page p {
+  font-size: 1.57rem;
+  line-height: 1.6;
+  color: white;
+  text-align: center; /* Center the text inside the element */
+  margin: 70px auto 70px auto; /* Center the element horizontally with auto margins */
+  width: 57%; /* Set the width to % of the page */
+}
+
+.about_end_page a {
+  color: #89CFF0; /* Baby blue color for links */
+}
+
+@media (max-width: 768px) {
+  .body_section p{
+    text-align: center;
+  }
+
+  .custom-description p {
+    font-size: 1.1rem;
+    font-family: 'Rubik', sans-serif;
+  }
+  .about_heading_section h1 {
+    font-size: 2rem;
+  }
+
+  .about_end_page p {
+    font-size: 1.1rem;
+    width: 93%;
+    margin: 50px auto 70px auto; /* Center the element horizontally with auto margins */
+  }
+
+  .secondHeading_section {
+    margin-bottom: 0rem;
+  }
+}

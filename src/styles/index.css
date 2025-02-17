@@ -1,0 +1,100 @@
+/* src/styles/index.css */
+/* @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* Tailwind CSS directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set a base font and color */
+body {
+  margin: 0;
+  font-family: 'Rubik', sans-serif;
+  background: linear-gradient(-45deg, #000000, #00031a, #000311, #02073c);
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; /* Flex container to align content */
+}
+
+/*tailwind text effect e.g. resume*/
+.text-sm {
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+/*tailwind text effect e.g. hello world*/
+.text-xs {
+  font-size: 1.5rem;
+}
+
+.h-4 {
+  height: 1.2rem;
+}
+
+/*tailwind text effect e.g. My Passions*/
+.text-7xl {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* Style the footer */
+footer {
+  flex-shrink: 0;
+  background: #00032f13;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+}
+
+/* Add responsive design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .navbar a {
+    margin: 5px 0;
+  }
+
+  .container {
+    width: 90%; /* Increase the width to give more space on mobile */
+    padding: 10px; /* Reduce padding to allow more content space */
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100%; /* Further increase the width on very small screens */
+    padding: 5px; /* Further reduce padding */
+  }
+}

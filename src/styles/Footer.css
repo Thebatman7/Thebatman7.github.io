@@ -1,0 +1,77 @@
+/* src/styles/Footer.css */
+.footer {
+    background: rgba(1, 1, 44, 0.089);
+    color: #fff;
+    padding: 5px 20px;
+    text-align: center;
+    width: 100%;
+    margin-top: auto; /* Ensure there's space between content and footer */
+}
+
+.footer .copyright {
+    font-size: 0.6rem;
+    margin-bottom: 0.5rem; /* Adjust margin to reduce space */
+    color: #cabbe0;
+}
+
+.footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem; /* Reduce gap between icons */
+    margin-top: 0; /* Remove any extra margin on top */
+    margin-bottom: 2.5px;
+}
+
+.footer .social-icons a {
+    color: #fff;
+    font-size: 1.5rem;
+    transition: color 0.3s ease, filter 0.3s ease; /* Add transition for filter */
+    position: relative; /* Ensure relative positioning for hover effect */
+}
+
+
+.footer .social-icons a.github-icon {
+    margin-top: 2px; /* Adjust this value as needed */
+}
+.footer .social-icons a.instagram-icon {
+    margin-top: 2px; /* Adjust this value as needed */
+}
+.footer .social-icons a.x-icon {
+    margin-top: 2px; /* Adjust this value as needed */
+}
+
+.footer .social-icons a:hover {
+    color: #0044ffd7; /* Change icon color on hover */
+    filter: drop-shadow(0 0 3px rgba(0, 162, 255, 0.3)) /* Add glow effect */
+            drop-shadow(0 0 12px rgba(0, 162, 255, 0.05)); /* Fading glow */
+    transform: translateY(-7px); /* Raise the icon slightly */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .footer .copyright {
+        font-size: 0.7rem;
+    }
+
+    .footer .social-icons {
+        gap: 1.7rem; /* Increase the gap for tablet-size screens */
+    }
+
+    .footer .social-icons a {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer .copyright {
+        font-size: 0.6rem;
+    }
+
+    .footer .social-icons {
+        gap: 1.5rem; /* Increase the gap for mobile screens */
+    }
+
+    .footer .social-icons a {
+        font-size: 1.5rem;
+    }
+}

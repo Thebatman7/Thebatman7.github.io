@@ -1,0 +1,229 @@
+.resume_page {
+    opacity: 0; /* Start invisible */
+    transition: opacity 0.5s ease-in; /* Transition effect */
+
+
+    margin-top: 90px;
+}
+
+.resume-section {
+    background-color: rgba(0, 6, 25, 0); 
+    backdrop-filter: blur(0px);
+}
+
+.resume_page_content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.resume_page.visible {
+    opacity: 1; /* Become visible */
+}
+
+/* this overrides the default color of input. !important */
+input {
+    color: #030d65 !important;
+}
+
+.resume_heading1 {
+    margin-bottom: 7px;
+}
+
+.resume_subheading2 {
+    margin-bottom: 100px;
+}
+
+.resume_textp {
+    margin-bottom: 3px;
+    font-size: 1rem;
+}
+
+.languageTool {
+    opacity: 0.6;
+    color: #1927a9cf;
+}
+
+/* yes and no buttons*/
+.inputVerification_section {
+    display: flex;
+    margin-top: 2rem;
+    justify-content: center; /* Center elements vertically */
+    align-items: center; /* Center elements horizontally */
+    flex-direction: column; /* Stack the text and buttons vertically */
+}
+
+.inputVerification_section p {
+    margin-bottom: 0.5rem; /* Space between the text and buttons */
+    text-align: center; /* Center the text */
+    font-size: 1.05rem; /* Font size */
+}
+
+.inputVerification_section button {
+    background: transparent;
+    padding: 0.2rem 0.6rem; /* Adjust padding if needed */
+    color: #ffffff; /* Text color */
+    font-size: 1rem; /* Font size */
+    border-radius: 30px; /* Rounded corners */
+    border: 2px solid transparent;
+    border: 2px solid rgba(255, 255, 255, 0.871);
+    background-color: transparent; /* Transparent background */
+    transition: box-shadow 0.3s, color 0.3s, border-color 0.3s; /* Smooth transition for hover effects */
+    cursor: pointer;
+    margin: 0.5rem; /* Margin between the buttons */
+    display: inline-block; /* Ensure the buttons stay inline */
+}
+
+.inputVerification_section .button-group {
+    display: flex; /* Align buttons side by side */
+    justify-content: center; /* Center buttons horizontally */
+}
+
+.inputVerification_section button:hover {
+    background: linear-gradient(45deg, rgba(4, 28, 148, 0.8), rgba(8, 50, 221, 0.8)); /* Blue gradient with transparency */
+    color: white; /* Change text color to white on hover */
+    border: 1px solid; /* Remove gradient outline on hover */
+    box-shadow: 0 0 11px rgba(52, 97, 220, 0.864); /* Blue glow effect */
+}
+
+.inputVerification_section button.active {
+    background: linear-gradient(45deg, rgba(4, 28, 148, 0.8), rgba(8, 50, 221, 0.8)); /* Active state styling */
+    color: white; /* Change text color to white when active */
+    border: 1px solid; /* Remove gradient outline on active */
+    box-shadow: 0 0 11px rgba(52, 97, 220, 0.864); /* Blue glow effect for active button */
+}
+
+/**/
+.rejectSuggestion_message p {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    font-size: 1.15rem;
+}
+
+/* Tabs code*/
+.field_tabs {
+    display: flex;
+    flex-wrap: wrap; /* Allow the tabs to wrap */
+    justify-content: center; /* Center the tabs */
+    gap: 0.5rem; /* Space between tabs */
+    margin-top: 1rem; /* Top margin for spacing */
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+    z-index: 10; /* Make sure tabs are on top of other content */
+    position: relative; /* Ensure the z-index works */
+}
+
+.tab-button {
+    background: transparent;
+    padding: 0.4rem 0.7rem; /* Base padding */
+    color: #ffffff; /* Text color */
+    font-size: 1rem; /* Base font size */
+    border-radius: 30px; /* Rounded corners */
+    border: 2px solid transparent;
+    border: 2px solid rgba(255, 255, 255, 0.871);
+    background-color: transparent; /* Transparent background */
+    transition: box-shadow 0.3s, color 0.3s, border-color 0.3s; /* Smooth transition for hover effects */
+    cursor: pointer;
+    margin: 0.5rem; /* Margin between the tabs */
+}
+
+.viewResumeButton_container {
+    border: 2px solid rgba(255, 255, 255, 0.871);
+    background: linear-gradient(45deg, rgba(4, 28, 148, 0.534), rgba(8, 51, 221, 0.499));
+    /* background: linear-gradient(-45deg, #020742c4, #01051D, #02073c); */
+    display: inline-flex !important;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    font-size: 1.1rem !important;
+    width: fit-content;
+}
+
+.viewResumeButton_container:hover {
+    background: linear-gradient(45deg, rgba(4, 28, 148, 0.912), rgba(8, 51, 221, 0.863)); /* Blue gradient with transparency */
+    border: 1px solid; /* Remove gradient outline on hover */
+}
+  
+
+/* Media query for small screens */
+@media (max-width: 640px) {
+    .tab-button {
+        padding: 0.3rem 0.6rem; /* Base padding */
+        /* flex: 0 1 45%; 2 tabs per row on mobile devices */ 
+    }
+
+    .field_tabs {
+        margin-left: 0.3rem;
+        margin-right: 0.3rem;
+    }
+
+    .resume_heading1 h1,
+    .text-xl {
+        font-size: 2rem !important;
+    }
+}
+
+/* Media query for tablets and larger devices */
+@media (min-width: 640px) {
+    .tab-button {
+        padding: 0.4rem 0.7rem; /* Adjust padding */
+        font-size: 1.1rem; /* Adjust font size */
+    }
+}
+
+/* Media query for larger screens (desktops) */
+@media (min-width: 1024px) {
+    .tab-button {
+        padding: 0.5rem 1rem; /* Further increase padding */
+        font-size: 1rem; /* Further increase font size */
+    }
+}
+
+.tab-button:hover {
+    background: linear-gradient(45deg, rgba(4, 28, 148, 0.8), rgba(8, 50, 221, 0.8)); /* Blue gradient with transparency */
+    color: white; /* Change text color to white on hover */
+    border: 1px solid; /* Remove gradient outline on hover */
+    box-shadow: 0 0 11px rgba(52, 97, 220, 0.864); /* Blue glow effect */
+}
+
+.tab-button.active {
+    background: linear-gradient(45deg, rgba(4, 28, 148, 0.8), rgba(8, 50, 221, 0.8)); /* Active state styling */
+    color: white; /* Change text color to white when active */
+    border: 1px solid; /* Remove gradient outline on active */
+    box-shadow: 0 0 11px rgba(52, 97, 220, 0.864); /* Blue glow effect for active tab */
+}
+
+
+/* Resume cards */
+.resume_cards {
+    margin-top: 7rem; /* Add enough margin to push the cards below the tabs */
+    margin-bottom: 7rem; /* Add enough margin to push the cards below the tabs */
+    z-index: 5; /* Set a lower z-index than the tabs */
+    position: relative;
+}
+
+.fade-bottom {
+    /* Add top corner rounding */
+    border-top-left-radius: 7px !important;
+    border-top-right-radius: 7px !important;
+  
+    /* Fade effect: mask the bottom with a gradient */
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
+}
+
+@media (min-width: 640px) {
+    .sm\:p-7 {
+        padding: 1.3rem !important;
+    }
+}
+
+@media (min-width: 768px) {
+    /* not 100% sure about this, as it affects to all pages */
+    .md\:grid-cols-5 {
+        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    }
+}
